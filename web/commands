@@ -1,0 +1,8 @@
+echo $PATH
+export PATH="$PATH:`yarn global bin`"
+
+sudo nano /etc/sysctl.conf
+fs.inotify.max_user_watches=524288
+sysctl -p
+cat /proc/sys/fs/inotify/max_user_watches
+
